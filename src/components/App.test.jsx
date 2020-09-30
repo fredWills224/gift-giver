@@ -4,14 +4,13 @@ import App from './App';
 
 
 describe('App', ()=>{
-    
     const app = shallow(<App/>);
 
-    it ('renders correctly', () =>{
+    it('renders correctly', () =>{
         expect(app).toMatchSnapshot();
     });
 
-    it ('initializes the `state` with an empty lists of gifts', () =>{
+    it('initializes the `state` with an empty lists of gifts', () =>{
         expect(app.state().gifts).toEqual([]);
     });
 
@@ -21,16 +20,15 @@ describe('App', ()=>{
         beforeEach(()=>{
             app.find('.btn-add').simulate('click');
         });
-
         afterEach(() =>{
             app.setState({ gifts: [] });
         });
 
-        it ('adds a new gift to `state`', ()=>{
+        it('adds a new gift to `state`', ()=>{
             expect(app.state().gifts).toEqual([{ id: id }]);
         });
     
-        it ('adds a new gift to the rendered list', ()=>{
+        it('adds a new gift to the rendered list', ()=>{
             expect(app.find('.gift-list').children().length).toEqual(1);
         });
 

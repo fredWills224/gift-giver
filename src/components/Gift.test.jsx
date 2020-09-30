@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import Gift from './Gift';
 
 describe('Gift', ()=>{
-
     const gift = shallow( <Gift/> );
     
     it('renders properly',()=>{
@@ -15,7 +14,6 @@ describe('Gift', ()=>{
     });
 
     describe('when typing into the person input', ()=>{
-        
         const person = 'Uncle';
         
         beforeEach(()=>{
@@ -29,7 +27,6 @@ describe('Gift', ()=>{
     });
 
     describe('when typing into the present input', ()=>{
-
         const present = 'Television';
 
         beforeEach(()=>{
