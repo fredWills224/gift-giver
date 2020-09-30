@@ -22,6 +22,13 @@ class App extends Component {
 
     };
 
+    removeGift = id =>{
+        
+        const gifts = this.state.gifts.filter(gift => gift.id !== id);
+        this.setState({ gifts: gifts });
+
+    }
+
     render(){
         return(
             <div>
