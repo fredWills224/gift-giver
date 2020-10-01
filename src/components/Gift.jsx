@@ -4,10 +4,8 @@ import { Form, FormGroup, FormControl, FormLabel, Button } from 'react-bootstrap
 class Gift extends Component {
     
     constructor(){
-        
         super();
         this.state = { person: '', present: '' };
-
     }
     
     render(){
@@ -37,6 +35,7 @@ class Gift extends Component {
             </div>
         );
     }
+    
 }
 
 export default Gift;
