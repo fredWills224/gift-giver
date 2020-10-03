@@ -1,12 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 import App from './App';
 
 describe('App', ()=>{
     const app = shallow(<App/>);
 
     it('renders correctly', () =>{
-        expect(app).toMatchSnapshot();
+        expect(shallowToJson(app)).toMatchSnapshot();
     });
 
     it('initializes the `state` with an empty lists of gifts', () =>{
