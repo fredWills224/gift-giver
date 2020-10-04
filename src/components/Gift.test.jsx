@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 import Gift from './Gift';
 
 describe('Gift', ()=>{
@@ -9,7 +10,7 @@ describe('Gift', ()=>{
     const gift = shallow( <Gift {...props} /> );
     
     it('renders properly',()=>{
-        expect(gift).toMatchSnapshot();
+        expect(shallowToJson(gift)).toMatchSnapshot();
     });
 
     it('initializes a person and present in `state`', ()=>{
@@ -28,7 +29,7 @@ describe('Gift', ()=>{
         });
 
     });
-
+ 
     describe('when typing into the present input', ()=>{
         const present = 'Television';
 
